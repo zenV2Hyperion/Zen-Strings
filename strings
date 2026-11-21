@@ -123,6 +123,13 @@ const uintptr_t IsLegalSendEvent = "signalName"
 const uintptr_t BitMap = "0x7fffffffffff" // constant in RobloxPlayerBeta.dll
 const uintptr_t ControlFlowGuard = "0x7fffffffffff" // constant in RobloxPlayerBeta.dll
 
+// yara 
+const uintptr_t YaraScan = "40 53 48 83 EC 30 33 C0 48 8B DA 8B 51 08 48 8B 09"
+const uintptr_t YaraCore = "48 89 5C 24 08 48 89 6C 24 10 56 57 41 54 41 56 41 57" And  " 48 81 EC 80 00 00"
+const uintptr_t YaraNext = "48 89 5C 24 08 55 56 57 41 54 41 55 41 56 41 57"
+ And  " 48 83 EC 70 4D 8B D9"
+
+
 // raknet
 const uintptr_t ProcessNetworkPacket = "RakPeer::ProcessNetworkPacket"
 const uintptr_t ReportNetworkError = "[DFLog::NetworkTrace] reportPerServerMetric::: sc(%s:%d).state = %d :: returning false"
