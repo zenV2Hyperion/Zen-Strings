@@ -135,15 +135,15 @@ const char* task_tasksynchronize = "task.synchronize() may only be called from a
 const char* task_taskwait = "task.wait is not available for AuroraScripts";
 
 // signals stuff
-const char* clickdetector_mouseactionreplicated = "MouseActionReplicated";
-const char* clickdetector_mouseclick = "MouseClick";
-const char* clickdetector_mousehoverenter = "MouseHoverEnter";
-const char* clickdetector_mousehoverleave = "MouseHoverLeave";
-const char* clickdetector_rightmouseclick = "RightMouseClick";
+const char* MouseActionReplicated = "MouseActionReplicated";
+const char* FireLeftMouseClick = "MouseClick";
+const char* FireMouseHoverEnter = "MouseHoverEnter";
+const char* FireMouseHoverLeave = "MouseHoverLeave";
+const char* FireRightMouseClick = "RightMouseClick";
 const char* proximityprompt_getbestfit = "getBestFitProximityPrompts";
-const char* clickdetector_mouseclick_alias = "mouseClick";
-const char* clickdetector_playerwhoclicked = "playerWhoClicked";
-const char* clickdetector_playerwhohovered = "playerWhoHovered";
+const char* FireLeftMouseClickLegacy = "mouseClick";
+const char* PlayerWhoClicked = "playerWhoClicked";
+const char* PlayerWhoHovered = "playerWhoHovered";
 const char* proximityprompt_on_heartbeat = "proximityPromptOnHeartbeat";
 
 // engine stuff
