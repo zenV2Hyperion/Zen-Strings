@@ -1,5 +1,5 @@
 // Made by zenV2 Aka 5xnq
-// every string the dumper keys off in this build (189 of them)
+// every string the dumper keys off in this build (211 of them)
 
 #pragma once
 
@@ -223,3 +223,27 @@ const char* type = "type";
 const char* typeof = "typeof";
 const char* unpack = "unpack";
 const char* upper = "upper";
+
+// extra anchors
+const char* PropertyNotAssignable = "%s member of %s is read-only and cannot be assigned to";
+const char* InvalidMemberOf = "%s is not a valid member of %s";
+const char* InvalidMemberOfQuoted = "'%s' is not a valid member of %s";
+const char* PropertySetFailedGet = "[DFLog::PropertySet] Failed to get property: {}";
+const char* PropertySetFailedRead = "[DFLog::PropertySet] Failed to read: {}";
+const char* LuaInvalidKeyToNext = "invalid key to 'next'";
+const char* LuaBinaryStringSizeMismatch = "[FLog::Error] BinaryString size mismatch: trying to read more characters than remaining";
+const char* DataModelWasNotAvailable = "DataModel was not available";
+const char* DataModelIsNotAvailable = "DataModel is not available";
+const char* DataModelIsExpired = "DataModel is expired.";
+const char* UnableToAccessDataModel = "Unable to access DataModel";
+const char* NoDataModel = "No DataModel";
+const char* Heartbeat = "Heartbeat";
+const char* PostSimulation = "RunService.PostSimulation";
+const char* Workspace = "Workspace";
+const char* ProximityPrompt = "ProximityPrompt";
+const char* RemoteFunction = "RemoteFunction";
+const char* NetworkServer = "NetworkServer";
+const char* DragDetectorHoverCursor = "textures/Cursors/DragDetector/HoverCursor.png";
+const char* DragDetectorActivatedCursor = "textures/Cursors/DragDetector/ActivatedCursor.png";
+const char* LogServiceNotAvailable = "LogService:%s is not yet available";
+const char* TaskSchedulerArbiters = "Out of arbiter nodes: Increase the FInt::TaskSchedulerMaxNumOfArbiters value";
