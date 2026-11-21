@@ -1,180 +1,225 @@
 // Made by zenV2 Aka 5xnq
-// every string the dumper keys off in this build (154 of them)
+// every string the dumper keys off in this build (189 of them)
 
 #pragma once
 
-// print stuff
-const char* print_keyvalue = "%s %d";
-const char* print_assetid = "Current asset id is %lld";
-const char* print = "Current identity is %d";
+// Offsets stuff
+const char* Print = "Current identity is %d";
+const char* ScriptContextResume = "Can't resume script in this context";
+const char* GetLuaStateForInstance = "Script Start";
+const char* LuaVMLoad = "%s: bytecode corrupted";
+const char* LuaD_Throw = "resulting string too large";
+const char* TaskDefer = "task.defer is not available for AuroraScripts";
 
-// luau stuff
-const char* lua_fstring_1 = "%s: 0x%016llx";
-const char* loadsafe = "%s: bytecode corrupted";
-const char* lua_fstring_0 = "%s:%d: ";
-const char* lua_weak_ref = "Attempt to migrate WeakObjectRef across VM boundary";
-const char* lua_fstring = "AuroraStruct<%s>";
+// FFlag stuff
+const char* GetFFlag = "= Error-not-set";
+const char* SetFFlag = "[FLog::FastLogValueChanged] Setting variable {}";
+const char* FFlagPointer = "DebugWinDisableUpdates";
+const char* BooleanType = "?$ValueGetSet@_N@FLog@@";
+
+// Misc stuff
+const char* IdentityPTR = "Current identity is %d";
+const char* GetTlsPointer = "Current identity is %d";
+const char* CastArgs = "Argument %d missing or nil";
+const char* FLogDataBank = "WindowsThemeInit";
+const char* EnableLoadModule = "EnableLoadModule";
+const char* RobloxLogCrash = "Invalid Facet Access";
+
+// Remote stuff
+const char* FireServer = "FireServer can only be called from the client";
+const char* FireClient = "FireClient can only be called from the server";
+const char* FireAllClients = "FireAllClients can only be called from the server";
+const char* InvokeServer = "InvokeServer can only be called from the client";
+const char* InvokeClient = "InvokeClient can only be called from the server";
+
+// Property stuff
+const char* ClassDescriptor = "Could not find property descriptor";
+const char* getter = "%s is not a valid member of %s \"%s\"";
+const char* ttype = "%s is not a valid member of %s \"%s\"";
+const char* ttype_number = "%s is not a valid member of %s \"%s\"";
+const char* scriptable = "Unable to query property {}. It is not scriptable";
+const char* GetProperty = "%s is not a valid member of %s \"%s\"";
+const char* GetValues = "Invalid table key type used";
+
+// Lua stuff
+const char* luaG_runerror = "table overflow";
+const char* lua_error = "stack overflow";
 const char* lua_newstate = "Failed to create Lua state";
-const char* lua_state = "Script Start";
-const char* lua_ktable = "Trying to call method on object of type: `%s` with incorrect arguments.";
-const char* lua_metatable = "__metatable";
-const char* lua_protected = "cannot change a protected metatable";
-const char* lua_fstring_2 = "cannot resume %s coroutine";
-const char* lua_argerror = "invalid argument #%d to '%s' (%s)";
-const char* lua_ipairs = "ipairs";
-const char* lua_toobig = "resulting string too large";
-const char* lua_lib = "setmetatable";
-const char* lua_table_protected = "table has a protected metatable";
-const char* lua_dump_string = "{\\\"type\\\":\\\"string\\\",\\\"cat\\\":%d,\\\"size\\\":%d,\\\"data\\\":\\\"";
-
-// luag stuff
+const char* dumpgco = "{\"type\":\"string\",\"cat\":%d,\"size\":%d,\"data\":\"";
+const char* lua_checkstack = "Attempt to migrate WeakObjectRef across VM boundary";
+const char* pseudo2addr = "Attempt to migrate WeakObjectRef across VM boundary";
+const char* luaH_DummyNode = "Attempt to migrate WeakObjectRef across VM boundary";
+const char* LuaO_NilObject = "Attempt to migrate WeakObjectRef across VM boundary";
+const char* lua_pushfstring = "%s:%d: ";
+const char* luaO_pushfstring = "stack overflow";
+const char* luaL_argerror = "invalid argument #%d to '%s' (%s)";
+const char* luaL_error = "cannot change a protected metatable";
+const char* luaL_getmetafield = "__metatable";
+const char* luaC_dump = "\"0\":{\"type\":\"userdata\",\"cat\":0,\"size\":0}\n";
+const char* luaH_clone = "table has a protected metatable";
+const char* luaM_visitgco = "\"0\":{\"type\":\"userdata\",\"cat\":0,\"size\":0}\n";
+const char* loadsafe = "%s: bytecode corrupted";
 const char* luaG_concaterror = "attempt to concatenate %s with %s";
-const char* luaG_runerror_stack = "stack overflow";
-const char* luaG_runerror_table = "table overflow";
+const char* tclone = "table has a protected metatable";
+const char* newpage = "ipairs";
+const char* KTable = "Trying to call method on object of type: `%s` with incorrect arguments.";
+const char* luaL_register = "name conflict for module '%s'";
+const char* lua_resume = "too many arguments to resume";
+const char* lua_createtable = "Unexpected trailing character: '{}'";
+const char* luau_execute_false = "iterate over";
+const char* RaiseErr = "Attempt to migrate WeakObjectRef across VM boundary";
+const char* luaG_aritherror = "attempt to perform arithmetic (%s) on %s";
+const char* luaB_newproxy = "nil or boolean";
+const char* luaB_pcall = "pcall";
+const char* luaB_rawlen = "table or string expected";
+const char* luaB_getmetatable = "__metatable";
+const char* luaB_assert = "assertion failed!";
+const char* luaL_tostring = "__tostring";
+const char* luaV_gettable = "'__index' chain too long; possible loop";
+const char* luaV_settable = "'__newindex' chain too long; possible loop";
+const char* lua_break = "attempt to break across metamethod/C-call boundary";
+const char* luaG_runerrorl = "'__index' chain too long; possible loop";
+const char* lua_setfield = "sqrt2";
+const char* pusherror = "error in error handling";
+const char* luaL_typerrorL = "invalid argument #%d to '%s' (%s expected, got %s)";
+const char* luaopen_base = "xpcall";
+const char* luaopen_math = "sqrt2";
 
-// luab stuff
-const char* luaB_abs = "abs";
-const char* luaB_acos = "acos";
-const char* luaB_angle = "angle";
-const char* luaB_asin = "asin";
-const char* luaB_atan = "atan";
-const char* luaB_atan2 = "atan2";
-const char* luaB_byte = "byte";
-const char* luaB_ceil = "ceil";
-const char* luaB_char_ = "char";
-const char* luaB_clamp = "clamp";
-const char* luaB_classof = "classof";
-const char* luaB_clock = "clock";
-const char* luaB_codepoint = "codepoint";
-const char* luaB_codes = "codes";
-const char* luaB_cos = "cos";
-const char* luaB_cosh = "cosh";
-const char* luaB_create = "create";
-const char* luaB_cross = "cross";
-const char* luaB_date = "date";
-const char* luaB_deg = "deg";
-const char* luaB_difftime = "difftime";
-const char* luaB_dot = "dot";
-const char* luaB_exp = "exp";
-const char* luaB_find = "find";
-const char* luaB_floor = "floor";
-const char* luaB_fmod = "fmod";
-const char* luaB_format = "format";
-const char* luaB_frexp = "frexp";
-const char* luaB_gmatch = "gmatch";
-const char* luaB_gsub = "gsub";
-const char* luaB_isfinite = "isfinite";
-const char* luaB_isinf = "isinf";
-const char* luaB_isinstance = "isinstance";
-const char* luaB_isnan = "isnan";
-const char* luaB_ldexp = "ldexp";
-const char* luaB_len = "len";
-const char* luaB_lerp = "lerp";
-const char* luaB_log = "log";
-const char* luaB_log10 = "log10";
-const char* luaB_lower = "lower";
-const char* luaB_magnitude = "magnitude";
-const char* luaB_map = "map";
-const char* luaB_match = "match";
-const char* luaB_max = "max";
-const char* luaB_min = "min";
-const char* luaB_modf = "modf";
-const char* luaB_noise = "noise";
-const char* luaB_normalize = "normalize";
-const char* luaB_offset = "offset";
-const char* luaB_pack = "pack";
-const char* luaB_packsize = "packsize";
-const char* luaB_pow = "pow";
-const char* luaB_rad = "rad";
-const char* luaB_random = "random";
-const char* luaB_randomseed = "randomseed";
-const char* luaB_rep = "rep";
-const char* luaB_reverse = "reverse";
-const char* luaB_round = "round";
-const char* luaB_setfenv = "setfenv";
-const char* luaB_sign = "sign";
-const char* luaB_sin = "sin";
-const char* luaB_sinh = "sinh";
-const char* luaB_split = "split";
-const char* luaB_sqrt = "sqrt";
-const char* luaB_sub = "sub";
-const char* luaB_tan = "tan";
-const char* luaB_tanh = "tanh";
-const char* luaB_time = "time";
-const char* luaB_tonumber = "tonumber";
-const char* luaB_tostring = "tostring";
-const char* luaB_type = "type";
-const char* luaB_typeof = "typeof";
-const char* luaB_unpack = "unpack";
-const char* luaB_upper = "upper";
+// Engine stuff
+const char* GetGlobalState = "The schema may only be set once.";
+const char* getLuauSecurityFlags = "FrameRateManager";
+const char* TaskSchedulerPTR = "AppInitializer";
+const char* TaskSchedulerTargetFps = "TaskSchedulerTargetFps";
+const char* VisualEnginePointer = "AutoCapture_{}_Frames-{}-{}.raw";
+const char* CubeTextures = "AnalyticsPoints";
+const char* DrawSkyEnv = "AdvSkyRGBELinearEnvFS";
+const char* SkyGroup = "RenderAdvSkyGroup";
+const char* SkyThread = "AdvSkyKickWake";
+const char* Capability = "Cannot require a non-RobloxScript module from a RobloxScript";
 
-// fflag stuff
-const char* fflag_pointer = "DebugWinDisableUpdates";
+// Instance stuff
+const char* InstanceNew = "Unable to create an Instance of type \"%s\"";
+const char* InstanceFindFirstAncestorImpl = "FindFirstAncestorWhichIsA";
+const char* InstanceGetAttribute = "GetAttribute";
+const char* InstanceSetAttribute = "Attempt to assign attribute %s. CoreScript permission required";
+const char* InstanceFindFirstChild = "FindFirstChild";
+const char* InstanceFindFirstChildOfClass = "FindFirstChildOfClass";
+const char* InstanceGetChildren = "GetChildren";
+const char* InstanceIndex = "InstanceHandle";
+const char* GetModuleFromVMStateMap = "Requested module was required recursively";
+const char* WaitForChild = "illegal argument #2 (timeOut must be greater than 0)";
+const char* SetParent = "Attempt to set {} as its own parent";
 
-// remote / event stuff
-const char* remote_fireallclients = "FireAllClients can only be called from the server";
-const char* remote_fireclient = "FireClient can only be called from the server";
-const char* remote_fireserver = "FireServer can only be called from the client";
-const char* remote_invokeclient = "InvokeClient can only be called from the server";
-const char* remote_invokeserver = "InvokeServer can only be called from the client";
+// Task stuff
+const char* TaskSpawn = "task.spawn is not available for AuroraScripts";
+const char* TaskDelay = "task.delay is not available for AuroraScripts";
+const char* TaskWait = "task.wait is not available for AuroraScripts";
+const char* TaskDesynchronize = "task.desynchronize() may only be called from a script that is a descendant of an Actor";
+const char* TaskSynchronize = "task.synchronize() may only be called from a script that is a descendant of an Actor";
+const char* TaskCancel = "cannot cancel thread";
 
-// property / reflection stuff
-const char* property_code_getproperty = "%s is not a valid member of %s \\\"%s\\\"";
-const char* class_descriptor = "Could not find property descriptor";
-const char* property_code_getvalues = "Invalid table key type used";
-const char* property_query = "Unable to query property {}. It is not scriptable";
+// ScriptContext stuff
+const char* TaskQueue = "ScriptContextTaskQueue";
 
-// task scheduler stuff
-const char* taskscheduler_targetfps = "TaskSchedulerTargetFps";
-const char* task_taskcancel = "cannot cancel thread";
-const char* task_taskdefer = "task.defer is not available for AuroraScripts";
-const char* task_taskdelay = "task.delay is not available for AuroraScripts";
-const char* task_taskdesynchronize = "task.desynchronize() may only be called from a script that is a descendant of an Actor";
-const char* task_taskspawn = "task.spawn is not available for AuroraScripts";
-const char* task_tasksynchronize = "task.synchronize() may only be called from a script that is a descendant of an Actor";
-const char* task_taskwait = "task.wait is not available for AuroraScripts";
+// BasePart stuff
+const char* Primitive = "All parts passed to ArePartsTouchingOthers must be in the WorldRoot";
 
-// signals stuff
-const char* MouseActionReplicated = "MouseActionReplicated";
-const char* FireLeftMouseClick = "MouseClick";
-const char* FireMouseHoverEnter = "MouseHoverEnter";
-const char* FireMouseHoverLeave = "MouseHoverLeave";
-const char* FireRightMouseClick = "RightMouseClick";
-const char* proximityprompt_getbestfit = "getBestFitProximityPrompts";
-const char* FireLeftMouseClickLegacy = "mouseClick";
-const char* PlayerWhoClicked = "playerWhoClicked";
-const char* PlayerWhoHovered = "playerWhoHovered";
-const char* proximityprompt_on_heartbeat = "proximityPromptOnHeartbeat";
+// Signals stuff
+const char* FireProximityPrompt = "proximityPromptOnHeartbeat";
+const char* TouchInterest = "TouchInterest";
+const char* IsLegalSendEvent = "signalName";
 
-// engine stuff
-const char* engine_skythread = "AdvSkyKickWake";
-const char* engine_drawskyenv = "AdvSkyRGBELinearEnvFS";
-const char* engine_cubetextures = "AnalyticsPoints";
-const char* castargs = "Argument %d missing or nil";
-const char* instance_instancesetattribute = "Attempt to assign attribute %s. CoreScript permission required";
-const char* visual_engine = "AutoCapture_{}_Frames-{}-{}.raw";
-const char* engine_scriptcontextresume = "Can't resume script in this context";
-const char* capability = "Cannot require a non-RobloxScript module from a RobloxScript";
-const char* enable_module = "EnableLoadModule";
-const char* instance_instancefindfirstancestorimpl = "FindFirstAncestorWhichIsA";
-const char* instance_instancefindfirstchild = "FindFirstChild";
-const char* instance_instancefindfirstchildofclass = "FindFirstChildOfClass";
-const char* security_flags = "FrameRateManager";
-const char* instance_get_attribute = "GetAttribute";
-const char* instance_instancegetchildren = "GetChildren";
-const char* instance_index = "InstanceHandle";
-const char* identity = "ParabolaAdornment may only be instantiated by CoreScripts at this time";
-const char* sky_group = "RenderAdvSkyGroup";
-const char* global_state_schema = "The schema may only be set once.";
-const char* instance_instancenew = "Unable to create an Instance of type \\\"%s\\\"";
-const char* reset_filters = "[FLog::ResetFilters] ParseAndSetFilterValue saving {} = {} for {}";
+// Coroutine stuff
+const char* CoroutineCreate = "create";
+const char* CoroutineRunning = "running";
+const char* CoroutineStatus = "status";
+const char* CoroutineWrap = "wrap";
+const char* CoroutineYield = "yield";
+const char* CoroutineIsYieldable = "isyieldable";
+const char* CoroutineClose = "close";
 
-// misc stuff
-const char* getfflag_0 = "= Error-not-set";
-const char* appscheduler = "AppInitializer";
-const char* roblox_log_crash = "Invalid Facet Access";
-const char* databank = "WindowsThemeInit";
-const char* setfflag_1 = "[FLog::FastLogValueChanged] ...(previously unknown)...";
-const char* setfflag_0 = "[FLog::FastLogValueChanged] Setting variable {}";
-const char* bytecode_dtors = "doNotFallbackToBaselineRepresentation";
-const char* coroutine = "isyieldable";
+// Bytecode stuff
+const char* destroystring = "doNotFallbackToBaselineRepresentation";
+
+// ClickDetector stuff
+const char* MouseClick = "MouseClick";
+const char* RightMouseClick = "RightMouseClick";
+const char* MouseHoverEnter = "MouseHoverEnter";
+const char* MouseHoverLeave = "MouseHoverLeave";
+
+// LuaB stuff
+const char* abs = "abs";
+const char* acos = "acos";
+const char* angle = "angle";
+const char* asin = "asin";
+const char* atan = "atan";
+const char* atan2 = "atan2";
+const char* byte = "byte";
+const char* ceil = "ceil";
+const char* char_ = "char";
+const char* clamp = "clamp";
+const char* classof = "classof";
+const char* clock = "clock";
+const char* codepoint = "codepoint";
+const char* codes = "codes";
+const char* cos = "cos";
+const char* cosh = "cosh";
+const char* create = "create";
+const char* cross = "cross";
+const char* date = "date";
+const char* deg = "deg";
+const char* difftime = "difftime";
+const char* dot = "dot";
+const char* exp = "exp";
+const char* find = "find";
+const char* floor = "floor";
+const char* fmod = "fmod";
+const char* format = "format";
+const char* frexp = "frexp";
+const char* gmatch = "gmatch";
+const char* gsub = "gsub";
+const char* isfinite = "isfinite";
+const char* isinf = "isinf";
+const char* isinstance = "isinstance";
+const char* isnan = "isnan";
+const char* ldexp = "ldexp";
+const char* len = "len";
+const char* lerp = "lerp";
+const char* log = "log";
+const char* log10 = "log10";
+const char* lower = "lower";
+const char* magnitude = "magnitude";
+const char* map = "map";
+const char* match = "match";
+const char* max = "max";
+const char* min = "min";
+const char* modf = "modf";
+const char* noise = "noise";
+const char* normalize = "normalize";
+const char* offset = "offset";
+const char* pack = "pack";
+const char* packsize = "packsize";
+const char* pow = "pow";
+const char* rad = "rad";
+const char* random = "random";
+const char* randomseed = "randomseed";
+const char* rep = "rep";
+const char* reverse = "reverse";
+const char* round = "round";
+const char* setfenv = "setfenv";
+const char* setmetatable = "setmetatable";
+const char* sign = "sign";
+const char* sin = "sin";
+const char* sinh = "sinh";
+const char* split = "split";
+const char* sqrt = "sqrt";
+const char* sub = "sub";
+const char* tan = "tan";
+const char* tanh = "tanh";
+const char* time = "time";
+const char* tonumber = "tonumber";
+const char* tostring = "tostring";
+const char* type = "type";
+const char* typeof = "typeof";
+const char* unpack = "unpack";
+const char* upper = "upper";
